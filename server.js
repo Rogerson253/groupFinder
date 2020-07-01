@@ -5,7 +5,15 @@ const app = express();
 app.use(express.urlencoded({ extended : true }));
 app.use(express.json());
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
 
 app.listen(PORT, () => {
     console.log(`app is listening on port ${PORT}`);
