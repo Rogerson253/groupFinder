@@ -1,0 +1,24 @@
+{
+  "name": "groupfinder",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rogerson253/groupFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rogerson253/groupFinder/issues"
+  },
+  "homepage": "https://github.com/Rogerson253/groupFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.2.3"
+  }
+}
