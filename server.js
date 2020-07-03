@@ -15,6 +15,11 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 
+// Routes
+// =============================================================
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+
 app.listen(PORT, () => {
     console.log(`app is listening on port ${PORT}`);
 });

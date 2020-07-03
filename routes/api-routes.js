@@ -29,7 +29,8 @@ app.post("/api/new", function(req, res) {
     }).then(function(results) {
       // `results` here would be the newly created user
       res.end();
-    })});
+    });
+  });
 
 
     module.exports = router;
