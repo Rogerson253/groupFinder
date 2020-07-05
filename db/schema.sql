@@ -1,4 +1,11 @@
-DROP DATABASE IF EXISTS kooldb;
-CREATE DATABASE kooldb;
+DROP DATABASE IF EXISTS friendfinder;
+CREATE DATABASE friendfinder;
 
 -- hello.
+
+
+
+
+
+
+
