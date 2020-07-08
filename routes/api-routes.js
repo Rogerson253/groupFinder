@@ -1,11 +1,11 @@
-var express = require("express");
 
-var router = express.Router();
+
+
 
 // Import the model 
 
-var user = require("../models/user.js");
-
+const user = require("../models/user.js");
+module.exports=(app) => {
 // Create all our routes
 app.get("/", function(req, res) {
   user.all(function(data) {
@@ -32,5 +32,4 @@ app.post("/api/new", function(req, res) {
     });
   });
 
-
-    module.exports = router;
+}
