@@ -1,20 +1,14 @@
+// Import the model
+const db = require("../models");
 
-
-
-
-// Import the model 
-
-const user = require("../models/user.js");
-module.exports=(app) => {
+module.exports = (app) => {
 // Create all our routes
-app.get("/", function(req, res) {
-  user.all(function(data) {
-    var userData = {
-      user: data
-    };
-    console.log(userData);
-    res.render("index", userData);
-  });
+app.get("/api/users/", function(req, res) {
+  console.log(db);
+  db.Users.findAll({})
+    .then(function(dbUsers) {
+      res.json(dbUsers);
+    });
 });
 
 
