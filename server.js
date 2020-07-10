@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 3001;
 // Requiring our models for syncing
 var db = require("./models");
 
+// Routes
+// =============================================================
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
@@ -22,13 +27,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
-
-
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
 app.listen(PORT, () => {
     console.log(`app is listening on port ${PORT}`);
 });
