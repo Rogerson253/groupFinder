@@ -5,7 +5,7 @@ module.exports = (app) => {
 // Create all our routes
 app.get("/api/users/", function(req, res) {
   console.log(db);
-  db.Users.findAll({})
+  db.user.findAll({})
     .then(function(dbUsers) {
       res.json(dbUsers);
     });
