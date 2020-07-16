@@ -1,19 +1,24 @@
 import React from "react";
 import Jumbotron from "./components/Jumbotron";
 import Button from "react-bootstrap/Button";
-import API from "./components/utils/API";
+import axios from "axios";
 
 function App() {
-  const handleTest = () => {
-    API.getTest()
-      .then((res) => res.data)
-      .catch((err) => console.log(err));
-  };
+  function test() {
+    axios
+      .get("/api/test")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   return (
     <div className="App">
       <Jumbotron />
-      <Button oncClick={handleTest} variant="outline-primary">
+      <Button oncClick={test()} variant="outline-primary">
         Primary
       </Button>{" "}
     </div>
