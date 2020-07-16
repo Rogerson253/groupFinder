@@ -20,7 +20,7 @@ require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 app.get("/api/test", (req, res) => {
-  console.log("Hello World!");
+  res.json("Hello World!");
 });
 
 app.get("*", (req, res) => {
