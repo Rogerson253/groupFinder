@@ -18,6 +18,13 @@ class Quiz extends Component{
             <h2>Tell Us About You!</h2>
 
             <h4>#1. There was definitely enough room on that floating door for Leonardo DiCaprio.</h4>
+
+            <ListGroup horizontal>
+            <ListGroup.Item action onClick={alertClicked}>1</ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>2</ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>3</ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>4</ListGroup.Item>
+            </ListGroup>
             </Fragment>
         )
 
