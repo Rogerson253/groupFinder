@@ -1,12 +1,12 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const app = express();
 
-require('dotenv').config();
+require("dotenv").config();
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.use(express.urlencoded({ extended : true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
@@ -19,16 +19,20 @@ var db = require("./models");
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
+app.get("/api/test", (req, res) => {
+  res.json("Hello World!");
+});
+
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  });
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-  }
+  app.use(express.static("client/build"));
+}
 
 db.sequelize.sync().then(() => {
-app.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(`app is listening on port ${PORT}`);
-});
+  });
 });
