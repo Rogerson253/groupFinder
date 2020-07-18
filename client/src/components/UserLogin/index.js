@@ -34,12 +34,7 @@ this.setState({
 });
 }
 
-render() {
-    return (
-        <div>
-            <span> {this.state.userId}</span>
-        </div>
-    )};
+
 
 
 
