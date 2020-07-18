@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Component } from 'react';
+//import { Link } from 'react-router-dom';
 // import API from '../../routes/API';
 
 
@@ -19,7 +20,7 @@ updateInputField = (element) =>{
 submit = () =>{
     const userName = this.state.userId;
     const password = this.state.passId;
-//    API.createNewUser 
+    //API.createNewUser 
    console.log(userName, password)
 
 }
@@ -39,7 +40,8 @@ submit = () =>{
             <p>Password:</p>
             <input name = "passId" type="password" onChange= {this.updateInputField} id="password-input" placeholder="Password"/>
             <br/>
-            <button type="submit" onClick= {()=> this.submit()}>Submit</button>
+            <button type="submit"  onClick= {()=> this.submit()}>Submit</button>
+            
             <p>No Account? <a href="/signup.html">Sign Up</a></p>
         </form>
                 </div>
