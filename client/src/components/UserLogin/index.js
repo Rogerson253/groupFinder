@@ -24,6 +24,15 @@ submit = () =>{
 
 }
 
+render() {
+    return (
+        <div>
+            <span> {this.state.userId}</span>
+        </div>
+    )
+}
+
+
 
 
 
@@ -51,3 +60,4 @@ submit = () =>{
 }
 
 export default Login
+
