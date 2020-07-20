@@ -28,6 +28,16 @@ class Login extends Component {
       });
   };
 
+  getCharacterData = () => {
+    API.getCharacters()
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -80,6 +90,9 @@ class Login extends Component {
               No Account? <a href="/signup.html">Sign Up</a>
             </p>
           </form>
+          <button onClick={this.getCharacterData} type="submit">
+            Disney
+          </button>
         </div>
       </Fragment>
     );
