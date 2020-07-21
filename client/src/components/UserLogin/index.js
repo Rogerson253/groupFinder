@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Component } from "react";
 import API from "../utils/API";
+import { Link, Route } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -83,9 +84,11 @@ class Login extends Component {
               placeholder="Password"
             />
             <br />
+            <Link to="/questions">
             <button onClick={this.getUserData} type="submit">
               Submit
             </button>
+            </Link>
             <p>
               No Account? <a href="/signup.html">Sign Up</a>
             </p>
