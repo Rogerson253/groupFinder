@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Component } from "react";
-import {ListGroup} from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 function alertClicked() {
-  alert('You clicked the third ListGroupItem');
+  alert("You clicked the third ListGroupItem");
 }
 
 class Quiz extends Component {
@@ -16,7 +16,7 @@ class Quiz extends Component {
     return (
       <Fragment>
         <h1>Questionnaire</h1>
-        <h3 class="display-4">
+        <h3 className="display-4">
           Answer the questions using a scale of 1 (strongly disagree) to 5
           (strongly agree)
         </h3>
