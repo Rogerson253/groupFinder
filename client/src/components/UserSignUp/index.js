@@ -66,29 +66,35 @@ class SignUp extends Component {
     const { firstName, lastName, username, password } = this.state;
     return (
       <Fragment>
-        <h1>Log In Page</h1>
-        {/* <p>Hello {this.state.username}</p> */}
+        <h1>Sign Up Page</h1>
+        
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
-          <p>FirstName:</p>
+
+          <p>First Name:</p>
+
           <input
               name="firstName"
               type="text"
               value={firstName}
               onChange={this.handleChange}
               id="firstName-input"
-              placeholder="Firstname"
+              placeholder="First Name"
             />
-            <p>LastName:</p>
+
+            <p>Last Name:</p>
+
             <input
               name="lastName"
               type="text"
               value={lastName}
               onChange={this.handleChange}
               id="lastName-input"
-              placeholder="Lastname"
+              placeholder="Last Name"
             />
-            <p>UserName:</p>
+
+            <p>Username:</p>
+
             <input
               name="username"
               type="text"
@@ -112,13 +118,7 @@ class SignUp extends Component {
               Submit
             </button>
             </Link>
-            <p>
-              Already have an Account? <Link to = "/"> <button type="submit">Log In</button></Link>
-            </p>
           </form>
-          <button onClick={this.getCharacterData} type="submit">
-            Disney
-          </button>
         </div>
       </Fragment>
     );
