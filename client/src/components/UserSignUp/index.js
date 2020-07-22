@@ -70,7 +70,9 @@ class SignUp extends Component {
         
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
+
           <p>First Name:</p>
+
           <input
               name="firstName"
               type="text"
@@ -79,7 +81,9 @@ class SignUp extends Component {
               id="firstName-input"
               placeholder="First Name"
             />
+
             <p>Last Name:</p>
+
             <input
               name="lastName"
               type="text"
@@ -88,7 +92,9 @@ class SignUp extends Component {
               id="lastName-input"
               placeholder="Last Name"
             />
+
             <p>Username:</p>
+
             <input
               name="username"
               type="text"
@@ -129,53 +135,3 @@ export default SignUp;
 
 
 
-
-
-
-
-
-
-
-
-
-
-// import React, { Component } from "react";
-// import {BrowserRouter as Router, Route }from "react-router-dom";
-
-
-// class SignUp extends Component {
-
-
-// render(){
-
-//     return(
-// <Route>
-//   <Form.Group controlId="formBasicEmail">
-//     <Form.Label>Username</Form.Label>
-//     <Form.Control type="username" placeholder="Enter Username" />
-//   </Form.Group>
-
-//   <Form.Group controlId="formBasicPassword">
-//     <Form.Label>Password</Form.Label>
-//     <Form.Control type="password" placeholder="Password" />
-//   </Form.Group>
-//   <Button variant="primary" type="submit">
-//     Submit
-//   </Button>
-// </Route>
-
-
-
-
-//     )
-// }
-
-
-
-
-
-
-
-// }
-
-// export default SignUp;
