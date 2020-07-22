@@ -77,7 +77,7 @@ class SignUp extends Component {
               value={firstName}
               onChange={this.handleChange}
               id="firstName-input"
-              placeholder="Firstname"
+              placeholder="First Name"
             />
             <p>Last Name:</p>
             <input
@@ -86,7 +86,7 @@ class SignUp extends Component {
               value={lastName}
               onChange={this.handleChange}
               id="lastName-input"
-              placeholder="Lastname"
+              placeholder="Last Name"
             />
             <p>Username:</p>
             <input
