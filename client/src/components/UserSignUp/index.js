@@ -70,7 +70,7 @@ class SignUp extends Component {
         {/* <p>Hello {this.state.username}</p> */}
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
-          <p>FirstName</p>
+          <p>FirstName:</p>
           <input
               name="firstName"
               type="text"
@@ -79,7 +79,7 @@ class SignUp extends Component {
               id="firstName-input"
               placeholder="Firstname"
             />
-            <p>LastName</p>
+            <p>LastName:</p>
             <input
               name="lastName"
               type="text"
@@ -88,7 +88,7 @@ class SignUp extends Component {
               id="lastName-input"
               placeholder="Lastname"
             />
-            <p>UserName</p>
+            <p>UserName:</p>
             <input
               name="username"
               type="text"
@@ -113,7 +113,7 @@ class SignUp extends Component {
             </button>
             </Link>
             <p>
-              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
+              Already have an Account? <Link to = "/"> <button type="submit">Log In</button></Link>
             </p>
           </form>
           <button onClick={this.getCharacterData} type="submit">
@@ -135,53 +135,3 @@ export default SignUp;
 
 
 
-
-
-
-
-
-
-
-
-
-
-// import React, { Component } from "react";
-// import {BrowserRouter as Router, Route }from "react-router-dom";
-
-
-// class SignUp extends Component {
-
-
-// render(){
-
-//     return(
-// <Route>
-//   <Form.Group controlId="formBasicEmail">
-//     <Form.Label>Username</Form.Label>
-//     <Form.Control type="username" placeholder="Enter Username" />
-//   </Form.Group>
-
-//   <Form.Group controlId="formBasicPassword">
-//     <Form.Label>Password</Form.Label>
-//     <Form.Control type="password" placeholder="Password" />
-//   </Form.Group>
-//   <Button variant="primary" type="submit">
-//     Submit
-//   </Button>
-// </Route>
-
-
-
-
-//     )
-// }
-
-
-
-
-
-
-
-// }
-
-// export default SignUp;
