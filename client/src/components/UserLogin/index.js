@@ -62,7 +62,7 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <Fragment>
-        <h1>Log In Page hello</h1>
+        <h1>Log In Page</h1>
         {/* <p>Hello {this.state.username}</p> */}
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
