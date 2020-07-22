@@ -90,12 +90,9 @@ class Login extends Component {
             </button>
             </Link>
             <p>
-              No Account? <a href="/signup.html">Sign Up</a>
+              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
             </p>
           </form>
-          <button onClick={this.getCharacterData} type="submit">
-            Disney
-          </button>
         </div>
       </Fragment>
     );
