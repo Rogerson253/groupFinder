@@ -3,11 +3,13 @@ import { Component } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 
-class Login extends Component {
+class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
+      firstName: "",
+      lastName: "",
+      userName: "",
       password: "",
     };
   }
@@ -45,9 +47,11 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { username, password } = this.state;
+    const { firstName, lastName, userName, password } = this.state;
     API.saveUser({
-      username,
+      firstName,
+      lastName,
+      userName,
       password,
     })
       .then((res) => {
@@ -59,13 +63,32 @@ class Login extends Component {
   };
 
   render() {
-    const { username, password } = this.state;
+    const { firstName, lastName, username, password } = this.state;
     return (
       <Fragment>
         <h1>Log In Page</h1>
         {/* <p>Hello {this.state.username}</p> */}
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
+          <p>FirstName</p>
+          <input
+              name="firstName"
+              type="text"
+              value={firstName}
+              onChange={this.handleChange}
+              id="firstName-input"
+              placeholder="Firstname"
+            />
+            <p>LastName</p>
+            <input
+              name="lastName"
+              type="text"
+              value={lastName}
+              onChange={this.handleChange}
+              id="lastName-input"
+              placeholder="Lastname"
+            />
+            <p>UserName</p>
             <input
               name="username"
               type="text"
@@ -90,7 +113,7 @@ class Login extends Component {
             </button>
             </Link>
             <p>
-              No Account? <a href="/signup.html">Sign Up</a>
+              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
             </p>
           </form>
           <button onClick={this.getCharacterData} type="submit">
@@ -102,4 +125,63 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from "react";
+// import {BrowserRouter as Router, Route }from "react-router-dom";
+
+
+// class SignUp extends Component {
+
+
+// render(){
+
+//     return(
+// <Route>
+//   <Form.Group controlId="formBasicEmail">
+//     <Form.Label>Username</Form.Label>
+//     <Form.Control type="username" placeholder="Enter Username" />
+//   </Form.Group>
+
+//   <Form.Group controlId="formBasicPassword">
+//     <Form.Label>Password</Form.Label>
+//     <Form.Control type="password" placeholder="Password" />
+//   </Form.Group>
+//   <Button variant="primary" type="submit">
+//     Submit
+//   </Button>
+// </Route>
+
+
+
+
+//     )
+// }
+
+
+
+
+
+
+
+// }
+
+// export default SignUp;
