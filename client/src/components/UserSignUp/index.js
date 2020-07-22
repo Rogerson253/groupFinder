@@ -66,11 +66,11 @@ class SignUp extends Component {
     const { firstName, lastName, username, password } = this.state;
     return (
       <Fragment>
-        <h1>Log In Page</h1>
-        {/* <p>Hello {this.state.username}</p> */}
+        <h1>Sign Up Page</h1>
+        
         <div className="col">
           <form className="login" onSubmit={this.handleSubmit}>
-          <p>FirstName</p>
+          <p>First Name:</p>
           <input
               name="firstName"
               type="text"
@@ -79,7 +79,7 @@ class SignUp extends Component {
               id="firstName-input"
               placeholder="Firstname"
             />
-            <p>LastName</p>
+            <p>Last Name:</p>
             <input
               name="lastName"
               type="text"
@@ -88,7 +88,7 @@ class SignUp extends Component {
               id="lastName-input"
               placeholder="Lastname"
             />
-            <p>UserName</p>
+            <p>Username:</p>
             <input
               name="username"
               type="text"
@@ -112,13 +112,7 @@ class SignUp extends Component {
               Submit
             </button>
             </Link>
-            <p>
-              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
-            </p>
           </form>
-          <button onClick={this.getCharacterData} type="submit">
-            Disney
-          </button>
         </div>
       </Fragment>
     );
