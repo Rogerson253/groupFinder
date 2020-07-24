@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
+import "./style.css";
 
 function alertClicked() {
  
