@@ -43,11 +43,11 @@ As a user on Friend Finder, I would like to:
 
 
   ### **Contributors**:
-![Kristen](https://avatars0.githubusercontent.com/u/5201511?s=150&u=461ff279b018cfb15a30162bfd2e45f376926f25&v=4)|    ![Andrea](https://avatars0.githubusercontent.com/u/60406213?s=150&u=eea7e033fa5aad8d575d12e807de91ac912e7204&v=4)|    ![Karla](https://avatars3.githubusercontent.com/u/59662740?s=150&u=89423a740572121fdb0e1fcd42bb311a83073cfb&v=4)|    ![Ryan](https://avatars1.githubusercontent.com/u/59925546?s=150&u=19ccb48abfb0c61a5fa7dd875707b4e4a1025ff3&v=4)
-----------|----------|----------|----------
-Kristin Centers| Andrea Fenderson| Karla Dayhoff| Ryan Wilkinson
-kristincenters@gmail.com| Andrea_fenderson@ymail.com| kddayhoff@gmail.com| ryanhwilkinson@icloud.com
-https://kristincenters.github.io/| https://github.com/AJFenderson| https://github.com/kddayhoff| https://github.com/ryanhun7er
+![Rogerson](https://avatars3.githubusercontent.com/u/57200095?s=150&u=dff6adbe97f23e55a28c83416bc8863921229985&v=4)|    ![Andrea](https://avatars0.githubusercontent.com/u/60406213?s=150&u=eea7e033fa5aad8d575d12e807de91ac912e7204&v=4)|    ![Kiara](https://avatars1.githubusercontent.com/u/60331626?s=150&u=46cffda8c75e6d33d7c837d0398ada93844e637f&v=4)|    ![John](https://avatars2.githubusercontent.com/u/59971936?s=150&u=3a0472ebf78f6c10800781bdcaf10a9fe282e011&v=4)| ![Nari](https://avatars1.githubusercontent.com/u/58704859?s=150&u=6adacae3bbfcc4293a859a3550492beb678318a9&v=4)
+----------|----------|----------|----------|----------
+Rogerson Jean-Charles| Andrea Fenderson| Kiara Mahan| John Slota| Naritchaya Louis
+Rogerson253@gmail.com| Andrea_fenderson@ymail.com| kiaramahan@gmail.com| jslota17@comcast.net| Naritchayalouis@Gmail.com
+https://rogerson253.github.io/| https://github.com/AJFenderson| https://github.com/KiaraM-glitch| https://github.com/Jslota25| https://nklouis.github.io/Portfolio/
 
 
 ### **License**:
