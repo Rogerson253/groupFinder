@@ -15,14 +15,43 @@ Friend Finder is an application that uses the users unique answers from our pers
 ### <h3 id="usage">**User Story**:</h3>
 ```
 As a user on Friend Finder, I would like to:
-*access Friend Finder online from any computer with a link.
-*create a username and password to log into my Friend Finder account.
-*prevent others from logging in using my username and password.
-*be able to login and take the personality quiz
-*be paired with a friend based on my results.
+* access Friend Finder online from any computer with a link.
+* create a username and password to log into my Friend Finder account.
+* prevent others from logging in using my username and password.
+* be able to login and take the personality quiz
+* be paired with a friend based on my results.
 ```
-```
+## <h2 id="link">[*Deployed Heroku Link*!](https://route-404.herokuapp.com/)</h2>
 
+### <h3 id="Installation">**Install Process**:</h3> 
+> Click on the deployed link! 
+
+```
+### <h3 id="tech">**Technology Stack**:</h3>
+  - Node.js
+  - Express
+  - HTML
+  - mySQL
+  - Sequelize
+  - BcryptJS
+  - CSS
+  - axios
+  - Bootstrap
+  - Dotenv
+  - React​
+  ```
+
+
+  ### **Contributors**:
+![Kristen](https://avatars0.githubusercontent.com/u/5201511?s=150&u=461ff279b018cfb15a30162bfd2e45f376926f25&v=4)|    ![Andrea](https://avatars0.githubusercontent.com/u/60406213?s=150&u=eea7e033fa5aad8d575d12e807de91ac912e7204&v=4)|    ![Karla](https://avatars3.githubusercontent.com/u/59662740?s=150&u=89423a740572121fdb0e1fcd42bb311a83073cfb&v=4)|    ![Ryan](https://avatars1.githubusercontent.com/u/59925546?s=150&u=19ccb48abfb0c61a5fa7dd875707b4e4a1025ff3&v=4)
+----------|----------|----------|----------
+Kristin Centers| Andrea Fenderson| Karla Dayhoff| Ryan Wilkinson
+kristincenters@gmail.com| Andrea_fenderson@ymail.com| kddayhoff@gmail.com| ryanhwilkinson@icloud.com
+https://kristincenters.github.io/| https://github.com/AJFenderson| https://github.com/kddayhoff| https://github.com/ryanhun7er
+
+
+### **License**:
+![license](https://img.shields.io/badge/License-MIT-green)
 
 
 
