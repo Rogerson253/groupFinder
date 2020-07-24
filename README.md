@@ -21,7 +21,7 @@ As a user on Friend Finder, I would like to:
 * be able to login and take the personality quiz
 * be paired with a friend based on my results.
 ```
-## <h2 id="link">[*Deployed Heroku Link*!](https://route-404.herokuapp.com/)</h2>
+## <h2 id="link">[*Deployed Heroku Link*!](https://friendfinderappthatiscool.herokuapp.com/)</h2>
 
 ### <h3 id="Installation">**Install Process**:</h3> 
 > Click on the deployed link! 
