@@ -77,20 +77,24 @@ class Login extends Component {
             <p>Password:</p>
             <input
               name="password"
-              type="text"
+              type="password"
               value={password}
               onChange={this.handleChange}
               id="password-input"
               placeholder="Password"
             />
             <br />
-            <Link to="/questions">
+            {/* <Link to="/questions"> */}
             <button onClick={this.getUserData} type="submit">
-              Submit
+              Login
             </button>
-            </Link>
+            {/* </Link> */}
             <p>
-              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
+              No Account?{" "}
+              <Link to="/UserSignUp">
+                {" "}
+                <button type="submit">Sign Up</button>
+              </Link>
             </p>
           </form>
         </div>
