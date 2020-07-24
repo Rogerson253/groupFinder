@@ -1,4 +1,4 @@
-import React from "react";
+npm import React from "react";
 
 function Jumbotron() {
   return (

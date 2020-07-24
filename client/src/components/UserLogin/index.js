@@ -77,7 +77,7 @@ class Login extends Component {
             <p>Password:</p>
             <input
               name="password"
-              type="text"
+              type="password"
               value={password}
               onChange={this.handleChange}
               id="password-input"
