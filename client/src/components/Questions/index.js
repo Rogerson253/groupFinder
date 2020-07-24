@@ -4,7 +4,7 @@ import { ListGroup } from "react-bootstrap";
 import "./style.css";
 
 function alertClicked() {
-  alert("You clicked the third ListGroupItem");
+ 
 }
 
 class Quiz extends Component {
@@ -157,7 +157,7 @@ class Quiz extends Component {
         </ListGroup>
 
         <h4>
-          #7. Britney Spears' 2007 meltdown was a leap in culturual evolution.
+          #7. Britney Spears' 2007 meltdown was a leap in cultural evolution.
         </h4>
 
         <ListGroup horizontal>

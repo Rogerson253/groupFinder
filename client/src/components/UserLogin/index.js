@@ -93,13 +93,14 @@ class Login extends Component {
             <p>Password:</p>
             <input
               name="password"
-              type="text"
+              type="password"
               value={password}
               onChange={this.handleChange}
               id="password-input"
               placeholder="Password"
             />
             <br />
+
             <Link to="/questions">
 
             <Button style={{ fontWeight:"bolder", marginBottom:"3%", marginTop:"1%", backgroundColor:"greenyellow"}} as="input" type="submit" value="Submit" onClick={this.getUserData} />{' '}
@@ -111,8 +112,13 @@ class Login extends Component {
 
 
             </Link>
+
             <p>
-              No Account? <Link to = "/UserSignUp"> <button type="submit">Sign Up</button></Link>
+              No Account?{" "}
+              <Link to="/UserSignUp">
+                {" "}
+                <button type="submit">Sign Up</button>
+              </Link>
             </p>
           </form>
         </div>
