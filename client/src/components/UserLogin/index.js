@@ -84,11 +84,11 @@ class Login extends Component {
               placeholder="Password"
             />
             <br />
-            {/* <Link to="/questions"> */}
+             <Link to="/questions"> 
             <button onClick={this.getUserData} type="submit">
               Login
             </button>
-            {/* </Link> */}
+            </Link> 
             <p>
               No Account?{" "}
               <Link to="/UserSignUp">
