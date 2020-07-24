@@ -9,6 +9,20 @@
 * <a href="#contributors">Contributors</a> 
 * <a href="#license">License</a>
 
+### **Description**:
+Friend Finder is an application that uses the users unique answers from our personality quiz to pair them with a special character from our database.
+
+### <h3 id="usage">**User Story**:</h3>
+```
+As a user on Friend Finder, I would like to:
+*access Friend Finder online from any computer with a link.
+*create a username and password to log into my Friend Finder account.
+*prevent others from logging in using my username and password.
+*be able to login and take the personality quiz
+*be paired with a friend based on my results.
+```
+```
+
 
 
 
