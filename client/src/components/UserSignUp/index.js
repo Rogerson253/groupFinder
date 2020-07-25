@@ -24,16 +24,6 @@ class SignUp extends Component {
       });
   };
 
-  getCharacterData = () => {
-    API.getCharacters()
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
