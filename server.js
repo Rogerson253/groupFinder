@@ -14,13 +14,34 @@ const PORT = process.env.PORT || 3001;
 // Requiring our models for syncing
 var db = require("./models");
 
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+app.get("/api/users/", function (req, res) {
+  db.user.findAll({}).then(function (dbUsers) {
+    res.json(dbUsers);
+  });
+});
 
-app.get("/api/test", (req, res) => {
-  res.json("Hello World!");
+app.get("/api/users/username/:username", function (req, res) {
+  db.user
+    .findAll({
+      where: {
+        username: req.params.username,
+      },
+    })
+    .then(function (dbDefinitions) {
+      res.json(dbDefinitions);
+    });
+});
+
+app.post("/api/newuser", function (req, res) {
+  db.user
+    .create({
+      username: req.body.username,
+      password: req.body.password,
+    })
+    .then(function (dbUsers) {
+      // `results` here would be the newly created user
+      res.json(dbUsers);
+    });
 });
 
 app.get("*", (req, res) => {
