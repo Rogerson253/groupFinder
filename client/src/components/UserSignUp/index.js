@@ -9,9 +9,7 @@ class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: "",
-      lastName: "",
-      userName: "",
+      username: "",
       password: "",
     };
   }
@@ -42,11 +40,9 @@ class SignUp extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { firstName, lastName, userName, password } = this.state;
+    const { username, password } = this.state;
     API.saveUser({
-      firstName,
-      lastName,
-      userName,
+      username,
       password,
     })
       .then((res) => {
@@ -58,7 +54,7 @@ class SignUp extends Component {
   };
 
   render() {
-    const { firstName, lastName, username, password } = this.state;
+    const { username, password } = this.state;
     return (
       <Fragment>
         <body>
@@ -93,26 +89,6 @@ class SignUp extends Component {
               <Col>
                 <div className="col">
                   <form className="login" onSubmit={this.handleSubmit}>
-                    <p>First Name:</p>
-                    <input
-                      name="firstName"
-                      type="text"
-                      value={firstName}
-                      onChange={this.handleChange}
-                      id="firstName-input"
-                      placeholder="First Name"
-                    />
-
-                    <p>Last Name:</p>
-                    <input
-                      name="lastName"
-                      type="text"
-                      value={lastName}
-                      onChange={this.handleChange}
-                      id="lastName-input"
-                      placeholder="Last Name"
-                    />
-
                     <p>Username:</p>
                     <input
                       name="username"
