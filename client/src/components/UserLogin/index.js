@@ -90,7 +90,7 @@ class Login extends Component {
             marginTop: "2%",
           }}
         >
-          <h2>Sign Up Page</h2>
+          <h2>Log In Page</h2>
           <Row>
             <Col>
               {/* <p>Hello {this.state.username}</p> */}
