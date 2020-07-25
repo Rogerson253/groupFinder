@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Component } from 'react';
+import "./style.css";
 
 
 

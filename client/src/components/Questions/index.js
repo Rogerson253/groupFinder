@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Component } from "react";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Container } from "react-bootstrap";
 import "./style.css";
 
 function alertClicked() {
@@ -16,13 +16,15 @@ class Quiz extends Component {
   render() {
     return (
       <Fragment>
+       
         <h1>Questionnaire</h1>
+        <h2>Tell Us About You!</h2>
         <h3 className="display-4">
           Answer the questions using a scale of 1 (strongly disagree) to 5
           (strongly agree)
         </h3>
-        <h2>Tell Us About You!</h2>
-
+        
+        <Container style={{backgroundColor:"#cbf7c7", padding:"3%", width:"75%", marginRight:"auto", marginLeft:"auto", marginBottom:"2%"}}>
         <h4>
           #1. There was definitely enough room on that floating door for
           Leonardo DiCaprio.
@@ -244,7 +246,7 @@ class Quiz extends Component {
           </ListGroup.Item>
         </ListGroup>
 
-        
+        </Container>
       </Fragment>
     );
   }
