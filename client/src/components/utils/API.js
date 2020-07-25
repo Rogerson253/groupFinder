@@ -37,7 +37,7 @@ import axios from "axios";
 
 export default {
   getUser: function () {
-    return axios.get("/api/users");
+    return axios.get("/api/users/");
   },
   getCharacters: function () {
     return axios.get("https://api.disneyapi.dev/characters");
