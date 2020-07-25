@@ -24,21 +24,6 @@ class Login extends Component {
       });
   };
 
-  selectImage = (imageList) => {
-    return imageList && imageList[0] && imageList[0].imageUrl;
-  };
-
-  getCharacterData = () => {
-    API.getCharacters()
-      .then((res) => {
-        console.log(res.data[0].imageUrl);
-        this.setState({ characterImage: this.selectImage(res.data) });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -102,7 +87,6 @@ class Login extends Component {
                     id="username-input"
                     placeholder="Username"
                   />
-
                   <p>Password:</p>
                   <input
                     name="password"
@@ -113,25 +97,23 @@ class Login extends Component {
                     placeholder="Password"
                   />
                   <br />
-                  <img src={this.state.characterImage} />
-                  <Link to="/questions">
-                    <Button
-                      style={{
-                        fontWeight: "bolder",
-                        marginBottom: "3%",
-                        marginTop: "1%",
-                        backgroundColor: "greenyellow",
-                      }}
-                      as="input"
-                      type="submit"
-                      value="Submit"
-                      onClick={this.getUserData}
-                    />{" "}
-                    {/* <button onClick={this.getUserData} type="submit">
+                  {/* <Link to="/questions"> */}
+                  <Button
+                    style={{
+                      fontWeight: "bolder",
+                      marginBottom: "3%",
+                      marginTop: "1%",
+                      backgroundColor: "greenyellow",
+                    }}
+                    as="input"
+                    type="submit"
+                    value="Login"
+                    onClick={this.getUserData}
+                  />{" "}
+                  {/* <button onClick={this.getUserData} type="submit">
               Submit
             </button> */}
-                  </Link>
-
+                  {/* </Link> */}
                   <p>
                     No Account?{" "}
                     <Link to="/UserSignUp">
@@ -144,7 +126,6 @@ class Login extends Component {
             </Col>
           </Row>
         </Container>
-        <button onClick={this.getCharacterData}>Disney</button>
       </Fragment>
     );
   }
