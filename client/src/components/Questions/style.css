@@ -2,17 +2,17 @@ h1{
     text-align: center;
 }
 
-h2{
+.h2Quiz{
  color:#FF4500; 
- font-weight: bolder; 
+ font-weight: bolder;
+ margin-left: 10% 
 
 }
 
 h3{
     font-size: 25px;
     background-color:#FFFF99;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:10%;
     width:75%; 
     padding:1%
     

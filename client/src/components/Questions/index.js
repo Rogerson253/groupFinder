@@ -18,7 +18,7 @@ class Quiz extends Component {
       <Fragment>
        
         <h1>Questionnaire</h1>
-        <h2>Tell Us About You!</h2>
+        <h2 className="h2Quiz">Tell Us About You!</h2>
         <h3 className="display-4">
           Answer the questions using a scale of 1 (strongly disagree) to 5
           (strongly agree)
