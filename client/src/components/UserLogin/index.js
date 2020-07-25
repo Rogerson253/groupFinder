@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 import { Button, Container, Jumbotron, Col, Row } from "react-bootstrap";
 import "./style.css";
 
-const body = document.body;
-
-const imgEl = document.createElement("img");
-
 class Login extends Component {
   constructor() {
     super();
@@ -17,13 +13,6 @@ class Login extends Component {
       password: "",
     };
   }
-
-  //   updateInputField = (element) => {
-  //     const name = element.target.name;
-  //     const value = element.target.value;
-
-  //     this.setState({ [name]: value });
-  //   };
 
   getUserData = () => {
     API.getUser()
@@ -43,7 +32,7 @@ class Login extends Component {
     API.getCharacters()
       .then((res) => {
         console.log(res.data[0].imageUrl);
-        this.setState({ celebrityImage: this.selectImage(res.data) });
+        this.setState({ characterImage: this.selectImage(res.data) });
       })
       .catch((err) => {
         console.log(err);
@@ -102,7 +91,6 @@ class Login extends Component {
           <h2>Sign Up Page</h2>
           <Row>
             <Col>
-              {/* <p>Hello {this.state.username}</p> */}
               <div className="col">
                 <form className="login" onSubmit={this.handleSubmit}>
                   <p>Username:</p>
@@ -125,7 +113,7 @@ class Login extends Component {
                     placeholder="Password"
                   />
                   <br />
-                  <img src={this.state.celebrityImage} />
+                  <img src={this.state.characterImage} />
                   <Link to="/questions">
                     <Button
                       style={{
