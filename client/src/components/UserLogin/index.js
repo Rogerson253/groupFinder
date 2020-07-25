@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import { Button, Container, Jumbotron, Col, Row } from "react-bootstrap";
 import "./style.css";
 
+const body = document.body;
+
+const imgEl = document.createElement("img");
+
 class Login extends Component {
   constructor() {
     super();
@@ -31,10 +35,15 @@ class Login extends Component {
       });
   };
 
+  selectImage = (imageList) => {
+    return imageList && imageList[0] && imageList[0].imageUrl;
+  };
+
   getCharacterData = () => {
     API.getCharacters()
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data[0].imageUrl);
+        this.setState({ celebrityImage: this.selectImage(res.data) });
       })
       .catch((err) => {
         console.log(err);
@@ -116,7 +125,7 @@ class Login extends Component {
                     placeholder="Password"
                   />
                   <br />
-
+                  <img src={this.state.celebrityImage} />
                   <Link to="/questions">
                     <Button
                       style={{
@@ -147,6 +156,7 @@ class Login extends Component {
             </Col>
           </Row>
         </Container>
+        <button onClick={this.getCharacterData}>Disney</button>
       </Fragment>
     );
   }
