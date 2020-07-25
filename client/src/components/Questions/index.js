@@ -2,19 +2,56 @@ import React, { Fragment } from "react";
 import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
 
-function alertClicked() {
- 
-}
-
 class Quiz extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      error: null,
+      isLoaded: false,
+      items: []
+    };
   }
 
+  componentDidMount() {
+    fetch("http://api.disneyapi.dev/characters")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            items: result.data
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+  
+
   render() {
-    return (
+    const { error, isLoaded, items } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        
       <Fragment>
+        <ul>
+          {items.map(data => (
+            <li key={data.name}>
+              {data.name} 
+            </li>
+          ))}
+        </ul>
         <h1>Questionnaire</h1>
         <h3 className="display-4">
           Answer the questions using a scale of 1 (strongly disagree) to 5
@@ -28,19 +65,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -50,19 +87,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -72,19 +109,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -94,19 +131,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -116,19 +153,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -138,19 +175,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -160,19 +197,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -182,19 +219,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -204,19 +241,19 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={""}>
             5
           </ListGroup.Item>
         </ListGroup>
@@ -226,27 +263,29 @@ class Quiz extends Component {
         </h4>
 
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={this.componentDidMount}>
             1
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={this.componentDidMount}>
             2
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={this.componentDidMount}>
             3
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={this.componentDidMount}>
             4
           </ListGroup.Item>
-          <ListGroup.Item action onClick={alertClicked}>
+          <ListGroup.Item action onClick={this.componentDidMount}>
             5
           </ListGroup.Item>
         </ListGroup>
 
         
+        
       </Fragment>
     );
   }
+}
 }
 
 export default Quiz;
