@@ -13,7 +13,7 @@ class Login extends Component {
       password: "",
     };
   }
-
+  // Console logs data from the database
   getUserData = () => {
     API.getUser()
       .then((res) => {
@@ -28,6 +28,7 @@ class Login extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  // Posts data to the database
   handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
@@ -110,9 +111,6 @@ class Login extends Component {
                     value="Login"
                     onClick={this.getUserData}
                   />{" "}
-                  {/* <button onClick={this.getUserData} type="submit">
-              Submit
-            </button> */}
                   {/* </Link> */}
                   <p>
                     No Account?{" "}

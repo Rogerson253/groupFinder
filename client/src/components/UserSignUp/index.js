@@ -13,7 +13,7 @@ class SignUp extends Component {
       password: "",
     };
   }
-
+  // Console logs data from the database
   getUserData = () => {
     API.getUser()
       .then((res) => {
@@ -28,6 +28,7 @@ class SignUp extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  // Posts data to the database
   handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
