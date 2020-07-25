@@ -98,20 +98,20 @@ class Login extends Component {
                     placeholder="Password"
                   />
                   <br />
-                  {/* <Link to="/questions"> */}
-                  <Button
-                    style={{
-                      fontWeight: "bolder",
-                      marginBottom: "3%",
-                      marginTop: "1%",
-                      backgroundColor: "greenyellow",
-                    }}
-                    as="input"
-                    type="submit"
-                    value="Login"
-                    onClick={this.getUserData}
-                  />{" "}
-                  {/* </Link> */}
+                  <Link to="/questions">
+                    <Button
+                      style={{
+                        fontWeight: "bolder",
+                        marginBottom: "3%",
+                        marginTop: "1%",
+                        backgroundColor: "greenyellow",
+                      }}
+                      as="input"
+                      type="submit"
+                      value="Login"
+                      onClick={this.getUserData}
+                    />{" "}
+                  </Link>
                   <p>
                     No Account?{" "}
                     <Link to="/UserSignUp">
