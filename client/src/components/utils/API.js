@@ -40,7 +40,7 @@ export default {
     return axios.get("/api/users");
   },
   getCharacters: function () {
-    return axios.get("http://api.disneyapi.dev/characters");
+    return axios.get("https://api.disneyapi.dev/characters");
   },
   saveUser: function (postData) {
     return axios.post("/api/newuser", postData);
