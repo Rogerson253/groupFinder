@@ -44,15 +44,6 @@ app.post("/api/newuser", function (req, res) {
     });
 });
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../public/quiz.html"));
-});
-
-// blog route loads blog.html
-app.get("/questions", function (req, res) {
-  res.sendFile(path.join(__dirname, "../public/questions.html"));
-});
-
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
